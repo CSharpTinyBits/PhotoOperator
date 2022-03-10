@@ -4,7 +4,7 @@
     {
         public bool IsEnabled { get; set; }
 
-        public CheckBoxPluggin(bool isEnabled, string title) : base(title)
+        public CheckBoxPluggin(bool isEnabled, string title) : base(title, PluginType.CheckBox)
         {
             IsEnabled = isEnabled;
         }

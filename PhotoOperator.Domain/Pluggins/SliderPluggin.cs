@@ -4,7 +4,7 @@
     {
         public decimal Value { get; set; }
 
-        public SliderPluggin(decimal value, string title) : base(title)
+        public SliderPluggin(decimal value, string title) : base(title, PluginType.Slider)
         {
             Value = value;
         }
