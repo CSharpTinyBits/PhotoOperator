@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using PhotoOperator.Domain.Images;
 
 namespace PhotoOperator.Domain.Pluggins
 {
     interface IPluggin
     {
-        void OnApply();
+        void OnApply(Image image);
     }
 }

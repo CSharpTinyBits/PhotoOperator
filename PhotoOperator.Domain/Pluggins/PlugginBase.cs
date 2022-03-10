@@ -1,4 +1,6 @@
-﻿namespace PhotoOperator.Domain.Pluggins
+﻿using PhotoOperator.Domain.Images;
+
+namespace PhotoOperator.Domain.Pluggins
 {
     public abstract class PlugginBase : IPluggin
     {
@@ -11,6 +13,6 @@
             Type = type;
         }
 
-        public abstract void OnApply();
+        public abstract void OnApply(Image image);
     }
 }

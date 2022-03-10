@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using System;
+using PhotoOperator.Domain.Images;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -9,9 +9,19 @@ namespace PhotoOperator.Controllers.Apply
     {
         protected override Task Handle(Request request, CancellationToken cancellationToken)
         {
+            var image = GetImageByPath(request.RequestBody.ImagePath);
 
+            foreach (var pluggin in request.RequestBody.AppliedPluggins)
+            {
+                pluggin.OnApply(image);
+            }
 
             return Task.CompletedTask;
+        }
+
+        private Image GetImageByPath(string path)
+        {
+            return new Image();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace PhotoOperator.Domain.Pluggins
+﻿using PhotoOperator.Domain.Images;
+
+namespace PhotoOperator.Domain.Pluggins
 {
     public class SliderPluggin : PlugginBase
     {
@@ -9,7 +11,7 @@
             Value = value;
         }
 
-        public override void OnApply()
+        public override void OnApply(Image image)
         {
             throw new System.NotImplementedException();
         }
