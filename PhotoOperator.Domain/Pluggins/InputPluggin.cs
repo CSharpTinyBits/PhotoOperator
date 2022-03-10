@@ -4,9 +4,14 @@
     {
         public string Text { get; set; }
 
-        public InputPluggin(string text, string title) : base(title, PluginType.Input)
+        public InputPluggin(string text, string title) : base(title, PlugginType.Input)
         {
             Text = text;
+        }
+
+        public override void OnApply()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

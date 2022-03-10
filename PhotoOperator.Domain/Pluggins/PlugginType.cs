@@ -1,6 +1,6 @@
 ﻿namespace PhotoOperator.Domain.Pluggins
 {
-    public enum PluginType
+    public enum PlugginType
     {
         Input,
         Slider,

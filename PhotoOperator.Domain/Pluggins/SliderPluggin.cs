@@ -4,9 +4,14 @@
     {
         public decimal Value { get; set; }
 
-        public SliderPluggin(decimal value, string title) : base(title, PluginType.Slider)
+        public SliderPluggin(decimal value, string title) : base(title, PlugginType.Slider)
         {
             Value = value;
+        }
+
+        public override void OnApply()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
